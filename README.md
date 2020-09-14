@@ -69,7 +69,7 @@ Nous avons utiliser localStorage afin d'enregistrer dans la mémoire du navigate
 
 Un petit rappel sur `localStorage` :
 
-- `localStorage.setItem("colorMode", mode )` - enregistre la valeur de mode dans l'objet `localStorage`
+- `localStorage.setItem("colorMode", mode)` - enregistre la valeur de mode dans l'objet `localStorage`
 - `localStorage.getItem("colorMode")` - permet de recupérer la valeur enregistrée sous la clé `"colorMode"`
 - localStorage enregistre tout en format de `string`
 - afin de enregistrer un objet nous utilisons le format JSON :
@@ -96,7 +96,7 @@ useEffect(() => {
 
 Nous allons besoin de la valeur stockée dans localStorage pour la passer en tant que la valeur initiale de `shopping` :
 
-`const [shopping, setShoppin] = useState( /* ici !! */ )`
+`const [shopping, setShopping] = useState( /* ici !! */ )`
 
 Alors :
 
