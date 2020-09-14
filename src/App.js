@@ -1,19 +1,20 @@
-import React, { useState } from "react"
-import AppContainer from "./components/AppContainer"
+import React from "react"
 import ShoppingApp from "./components/ShoppingApp"
+import AppContainer from "./components/AppContainer"
 import ModeSwitch from "./components/ModeSwitch"
+import ModeContextProvider from "./context/ModeContext"
 
 function App() {
-  const [mode, setMode] = useState("light")
-
   return (
-    <AppContainer mode={mode}>
-      <header className="App-header d-flex justify-content-between flex-wrap align-items-center mb-5">
-        <h1>Ma liste des courses</h1>
-        <ModeSwitch setMode={setMode} />
-      </header>
-      <ShoppingApp mode={mode} />
-    </AppContainer>
+    <ModeContextProvider>
+      <AppContainer>
+        <header className="App-header d-flex justify-content-between flex-wrap align-items-center mb-5">
+          <h1>Ma liste des courses</h1>
+          <ModeSwitch />
+        </header>
+        <ShoppingApp />
+      </AppContainer>
+    </ModeContextProvider>
   )
 }
 

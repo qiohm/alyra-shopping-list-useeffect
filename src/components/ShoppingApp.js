@@ -4,7 +4,6 @@ import ShoppingList from "./ShoppingList"
 import AddProductForm from "./AddProductForm"
 
 const ShoppingApp = (props) => {
-  const { mode } = props
   const [shopping, setShopping] = useState([])
 
   const addToShoppingList = (product) => {
@@ -21,7 +20,6 @@ const ShoppingApp = (props) => {
         shopping={shopping}
         addToShoppingList={addToShoppingList}
         removeFromShoppingList={removeFromShoppingList}
-        mode={mode}
       />
       <ShoppingList
         shopping={shopping}

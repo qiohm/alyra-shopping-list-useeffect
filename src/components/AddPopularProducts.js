@@ -1,7 +1,9 @@
-import React from "react"
+import React, { useContext } from "react"
+import { ModeContext } from "./../context/ModeContext"
 
 const AddPopularProducts = (props) => {
-  const { shopping, addToShoppingList, mode } = props
+  const { shopping, addToShoppingList } = props
+  const { mode } = useContext(ModeContext)
   const populars = ["sel", "sucre", "pain", "lait", "beurre", "huile"]
   const buttonClass = mode === "dark" ? "btn-outline-light" : "btn-dark"
   return (

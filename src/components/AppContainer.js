@@ -1,6 +1,8 @@
-import React from "react"
+import React, { useContext } from "react"
+import { ModeContext } from "./../context/ModeContext"
 
-const AppContainer = ({ children, mode }) => {
+const AppContainer = ({ children }) => {
+  const { mode } = useContext(ModeContext)
   const modeClass = mode === "dark" ? "bg-dark text-white" : ""
   return (
     <div className={`min-vh-100 py-3 ${modeClass}`}>

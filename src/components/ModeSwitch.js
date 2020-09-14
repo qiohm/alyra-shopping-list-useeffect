@@ -1,7 +1,8 @@
-import React from "react"
+import React, { useContext } from "react"
+import { ModeContext } from "./../context/ModeContext"
 
-const ModeSwitch = (props) => {
-  const { setMode } = props
+const ModeSwitch = () => {
+  const { setMode } = useContext(ModeContext)
   const hanleModeChange = () => {
     setMode((mode) => (mode === "dark" ? "light" : "dark"))
   }
