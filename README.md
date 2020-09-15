@@ -136,4 +136,4 @@ const [shopping, setShopping] = useState(expensiveOperationFunction) //  bien �
 
 ## localStorage (4)
 
-Utiliser la même approche et modifier le fichier `App.js` afin de profiter de localStorage pour stocker la valeur de `mode`.
+Utiliser la même approche et modifier le fichier `src/context/ModeContext.js` afin de profiter de localStorage pour stocker la valeur de `mode`.
