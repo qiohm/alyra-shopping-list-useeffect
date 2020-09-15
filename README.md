@@ -102,7 +102,7 @@ Alors :
 
 `const [shopping, setShopping] = useState( JSON.parse(localStorage.getItem('myShoppingList')) || [] )`
 
-La valeur initiale de shopping est utilisée uniquement une fois, au moment ou le compenent monte, pourtant l'expression `JSON.parse(localStorage.getItem('myShoppingList')) || []` sera évaluée à chaque render.
+La valeur initiale de shopping est utilisée uniquement une fois, au moment ou le component monte, pourtant l'expression `JSON.parse(localStorage.getItem('myShoppingList')) || []` sera évaluée à chaque render.
 
 Pour y rémédier et améliorer la performance, nous pouvons passer une fonction dans `useState` :
 
