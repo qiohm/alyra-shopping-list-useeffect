@@ -3,8 +3,9 @@ import React, { useState, useEffect, createContext } from "react"
 export const ModeContext = createContext()
 
 const ModeContextProvider = ({ children }) => {
-  const [mode, setMode] = useState(localStorage.getItem('mode') || 'light')
-
+  const [mode, setMode] = useState(
+    () => localStorage.getItem('mode') || 'light')
+// lazy effect
   useEffect( () => {
 localStorage.setItem('mode', mode)
   }, [mode])
