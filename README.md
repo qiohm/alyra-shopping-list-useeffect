@@ -72,7 +72,7 @@ Un petit rappel sur `localStorage` :
 - `localStorage.setItem("colorMode", mode)` - enregistre la valeur de mode dans l'objet `localStorage`
 - `localStorage.getItem("colorMode")` - permet de recupérer la valeur enregistrée sous la clé `"colorMode"`
 - localStorage enregistre tout en format de `string`
-- afin de enregistrer un objet nous utilisons le format JSON :
+- afin d'enregistrer un objet nous utilisons le format JSON :
   - `JSON.stringify(myObjet)` transforme objet `myObjet` en string format JSON
   - `JSON.parse(myJSONString)` transforme `myJSONString` en objet JavaScript
 
